@@ -21,7 +21,10 @@ const divM = document.querySelector("#resultado-multiplicacion");
 // Evento para manejar el formulario de saludos
 formSaludo.addEventListener("submit", (event) => {
   event.preventDefault();
-  resultadoSaludo.innerHTML = `<p>${saludar()}</p>`;
+  
+  // Obtener valores del formulario de saludo
+  const nombre = document.querySelector("#nombre").value;
+  resultadoSaludo.innerHTML = `<p>${saludar(nombre)}</p>`;
 });
 
 // Evento para manejar el formulario de suma

@@ -1,3 +1,3 @@
-export function saludar() {
-    return "Hola";
+export function saludar(nombre) {
+    return `Hola ${nombre}`;
   }
