@@ -26,9 +26,9 @@ formSaludo.addEventListener("submit", (event) => {
   const nombre = document.querySelector("#nombre").value;
   const genero = document.querySelector("#genero").value;
   const edad = parseInt(document.querySelector("#edad").value, 10);
+  const idioma = document.querySelector("#idioma").value;
 
-
-  resultadoSaludo.innerHTML = `<p>${saludar(nombre,genero,edad)}</p>`;
+  resultadoSaludo.innerHTML = `<p>${saludar(nombre,genero,edad,idioma)}</p>`;
 });
 
 // Evento para manejar el formulario de suma

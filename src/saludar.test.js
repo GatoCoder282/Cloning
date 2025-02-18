@@ -30,4 +30,9 @@ describe("Función saludar", () => {
     expect(saludar("Sofia", "f", 40)).toContain("Sra. Sofia");
   });
 
+  test("Debe saludar en inglés", () => {
+    expect(saludar("John", "m", 25, "en")).toContain("Good morning John");
+    expect(saludar("Emma", "f", 40, "en")).toContain("Good morning Mrs. Emma");
+  });
+
 });
