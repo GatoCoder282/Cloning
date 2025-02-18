@@ -1,4 +1,4 @@
-export function saludar(nombre,genero) {
+export function saludar(nombre,genero, edad) {
     const hora = new Date().getHours();
   let saludo;
 
@@ -10,6 +10,10 @@ export function saludar(nombre,genero) {
     saludo = "Buenas noches";
   }
 
-  const generoSaludo = genero.toLowerCase() === "m" ? "Señor" : "Señora";
-  return `${saludo} ${generoSaludo} ${nombre}`;
+  let tratamiento = "";
+  if (edad > 30) {
+    tratamiento = genero.toLowerCase() === "m" ? "Sr." : "Sra.";
+  }
+
+  return `${saludo} ${tratamiento} ${nombre}`;
   }

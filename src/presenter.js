@@ -25,9 +25,10 @@ formSaludo.addEventListener("submit", (event) => {
   // Obtener valores del formulario de saludo
   const nombre = document.querySelector("#nombre").value;
   const genero = document.querySelector("#genero").value;
+  const edad = parseInt(document.querySelector("#edad").value, 10);
 
 
-  resultadoSaludo.innerHTML = `<p>${saludar(nombre,genero)}</p>`;
+  resultadoSaludo.innerHTML = `<p>${saludar(nombre,genero,edad)}</p>`;
 });
 
 // Evento para manejar el formulario de suma

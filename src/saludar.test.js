@@ -1,7 +1,7 @@
 import { saludar } from "./saludar.js";
 
 describe("Función saludar", () => {
-    
+
   test("Debe saludar con 'Hola' cuando no recibe parámetros", () => {
     expect(saludar()).toBe("Hola");
   });
@@ -23,6 +23,11 @@ describe("Función saludar", () => {
   test("Debe saludar con género", () => {
     expect(saludar("Carlos", "m")).toContain("Señor Carlos");
     expect(saludar("Maria", "f")).toContain("Señora Maria");
+  });
+
+  test("Debe saludar con tratamiento formal si tiene más de 30 años", () => {
+    expect(saludar("Luis", "m", 35)).toContain("Sr. Luis");
+    expect(saludar("Sofia", "f", 40)).toContain("Sra. Sofia");
   });
 
 });
